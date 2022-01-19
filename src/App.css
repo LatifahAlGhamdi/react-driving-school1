@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Merriweather:wght@300;400&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lora","Merriweather","Playfair Display";
+}
+/* https://us.123rf.com/450wm/belchonock/belchonock2101/belchonock210109237/162000540-traffic-cones-near-car-outdoors-driving-school-exam.jpg?ver=6 */
+/* https://www.ndsdrivingschool.co.za/wp-content/uploads/2021/04/instructor-with-checklist-woman-car-examination-lesson-driving-school-1024x681.jpg */
+body {
+    background-image: url("https://www.ndsdrivingschool.co.za/wp-content/uploads/2021/04/instructor-with-checklist-woman-car-examination-lesson-driving-school-1024x681.jpg ");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #8B8A8F;
+    height: 100%;
+    
+
+}
+
+nav {
+    width: 100%;
+    height: 69px;
+    background-color: black;
+    position: relative;
+    z-index: 0;
+}
+
+.main {
+    margin-left: 15px;
+}
+
+ul li {
+    width: 160px;
+    height: 60px;
+    background-color: #0005;
+    list-style: none;
+    text-decoration: none;
+    /* float: left; */
+    text-align: center;
+    line-height: 60px;
+    font-size: 15px;
+    margin-right: 10px;
+    border-radius: 10px;
+    /* display: block; */
+}
+
+ul li:hover {
+    background-color: rgb(56, 54, 54);
+    transition: 0.3s;
+}
+.nav-l{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 8px;
+    left: 215px;
+}
+.nav-r {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 8px;
+    right: 30px;
+}
+
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.cardd-coaches {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.bg {
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.form-signup {
+    /* border: 5px solid rgba(0, 0, 0, 0.329); */
+    color: white;
+    padding: 40px 0;
+    margin: 60px;
+    background-color: rgba(0, 0, 0, 0.548);
+    width: 50%;
+}
+
+.btn {
+    margin-top: 10px;
+}
+
+.name {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    color: black;
+}
+
+.cardd {
+    width: 400px;
+    margin: 75px auto 0;
+    background-color: #fff;
+    box-shadow: 0 3px rgba(0, 0, 0, .14);
+    color: #444;
+    text-align: center;
+    font-size: 16px;
+}
+
+.cardd .card-headerr {
+    position: relative;
+    height: 48px;
+}
+
+.cardd .card-headerr .profile-img {
+    width: 96px;
+    height: 96px;
+    border-radius: 1000px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 6px solid #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+}
+
+.cardd .card-bodyy {
+    padding: 10px 40px;
+}
+
+.form-profile {
+    
+    color: white;
+    padding: 40px 0;
+    margin: 60px 200px;
+    background-color: rgba(0, 0, 0, 0.548);
+    max-width: 1000px;
+}
+
+.appointment {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 50px;
+}
+
+.btnn {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #202020;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    padding: 20px;
+    width: 170px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.btnn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.btnn span::after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.btnn:hover {
+    padding-right: 25px;
+}
+
+.btnn:hover span::after {
+    opacity: 1;
+    right: 0;
+}
+.cardd-cardd-appointments {
+    width: 400px;
+    margin: 50px 20px 50px 250px;
+    background-color: #fff;
+    box-shadow: 0 3px rgba(0, 0, 0, .14);
+    color: #444;
+    text-align: center;
+    font-size: 16px;
+}
+.cardd-appointments {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.cardd-appointment{
+    border:1px solid rgba(0, 0, 0, 0.329);
+    margin-bottom: 10px;
+}
+.cardd-appointmentOne{
+    border:1px solid rgba(0, 0, 0, 0.329);
+    margin: 10px;
+}
+.cardd-cardd-message {
+    width: 250px;
+    background-color: #fff;
+    box-shadow: 0 3px rgba(0, 0, 0, .14);
+    color: #444;
+    text-align: center;
+    font-size: 16px;
+}
+.cardd-message{
+    border:1px solid rgba(0, 0, 0, 0.329);
+    margin: 20px
+}
+.linkk:hover{
+    background-color: rgb(56, 54, 54);
+    
+    color: white
+}
+.sub-menu{
+    display: none;
+}
+
+.main .content:hover .sub-menu{
+    display: block;
+    position: absolute;
+    margin-top: 3px;
+    margin-left: -31px;
+}
+.main .content:hover .sub-menu ul li{
+    margin-bottom: 10px;
+    background-color: black;
+}
+.main .content:hover .sub-menu ul li:hover{
+    background-color: rgb(37, 35, 35);
+}
+.home{
+    background-image: linear-gradient(rgba(0,0,0,0.72)  ,rgba(0,0,0,0.72) ), url("https://img.freepik.com/free-photo/close-up-man-driving-car_23-2147961519.jpg?size=626&ext=jpg");
+    background-repeat: no-repeat;
+    position: absolute;
+    background-size: 1400px;
+    height: 600px;
+    /* width: 100%; */
+    object-fit: cover;
+    padding-bottom:auto;
+    position: relative;
+    z-index: -1;
+    
+   
+}
+.home .content{
+    position: absolute;
+    left: 300px;
+    top: 60px;
+    color: white;
+    
+}
+.information{
+    margin-top: 70px;
+    width: 700px;
+    line-height: 40px;
+}
+.traffic-instructions{
+    background-image: linear-gradient(rgba(0,0,0,0.72)  ,rgba(0,0,0,0.72) ), url("https://img.freepik.com/free-photo/close-up-man-driving-car_23-2147961519.jpg?size=626&ext=jpg");
+    background-repeat: no-repeat;
+    position: absolute;
+    background-size: 1400px;
+    height: 930px;
+    /* width: 100%; */
+    object-fit: cover;
+    padding-bottom:auto;
+    position: relative;
+    z-index: -1;
+}
+.traffic-instructions .content-trafficInformation{
+    position: absolute;
+    left: 300px;
+    color: white;
+    
+    z-index: 0;
+}
+.traffic-instructions .content-trafficInformation .cards{
+    display: grid;
+    grid-gap: 6px 90px;
+    grid-template-columns: auto auto ;
+    max-width: 900px;
+}
+.cards .cardd-trafficInformation{
+    background-color: rgba(63, 61, 61, 0.658);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+   
+}
+
+@media (min-width:300px)and(max-width:812px){
+ul li{
+    height: 30px;
+    line-height: 30px;
+    margin-right: 10px;
+    width: 70px;
+    font-size: 10px;
+}
+.nav-l{
+    left: 150px;
+}
+}
