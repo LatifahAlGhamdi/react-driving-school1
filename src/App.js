@@ -52,7 +52,7 @@ function App() {
 
   const getAppointments = async () => {
     try {
-      const response = await axios.get("https://api-driving-school.herokuapp.com/api/auth/profile/user/appointments", {
+      const response = await axios.get("http://localhost:3000/api/auth/profile/user/appointments", {
         headers: {
           Authorization: localStorage.token,
         },
@@ -67,7 +67,7 @@ function App() {
   const getAppointmentsCoach = async () => {
     try{
     
-    const response = await axios.get("https://api-driving-school.herokuapp.com/api/coaches/profile/appointment", {
+    const response = await axios.get("http://localhost:3000/api/coaches/profile/appointment", {
       headers: {
         Authorization: localStorage.token,
       },
@@ -83,7 +83,7 @@ function App() {
   const getMessages = async ()=>{
     try{
 
-      const response = await axios.get("https://api-driving-school.herokuapp.com/api/coaches/profile/messages",{
+      const response = await axios.get("http://localhost:3000/api/coaches/profile/messages",{
         headers: {
           Authorization: localStorage.token,
         },
@@ -99,7 +99,7 @@ function App() {
   const getCommentsCoach = async ()=>{
     try{
 
-      const response = await axios.get("https://api-driving-school.herokuapp.com/api/coaches/profile/comments",{
+      const response = await axios.get("http://localhost:3000/api/coaches/profile/comments",{
         headers: {
           Authorization: localStorage.token,
         },
@@ -114,7 +114,7 @@ function App() {
   
   // const getRatings = async () => {
   //   try {
-  //     const response = await axios.get("https://api-driving-school.herokuapp.com/api/auth/profile/user/ratings", {
+  //     const response = await axios.get("http://localhost:3000/api/auth/profile/user/ratings", {
   //       headers: {
   //         Authorization: localStorage.token,
   //       },
@@ -129,7 +129,7 @@ function App() {
   
   const getProfile = async () => {
     try {
-      const response = await axios.get("https://api-driving-school.herokuapp.com/api/auth/profile", {
+      const response = await axios.get("http://localhost:3000/api/auth/profile", {
         headers: {
           Authorization: localStorage.token,
         },
@@ -149,7 +149,7 @@ function App() {
   }
   const getCoaches = async () => {
     try {
-      const response = await axios.get("https://api-driving-school.herokuapp.com/api/coaches", {
+      const response = await axios.get("http://localhost:3000/api/coaches", {
         headers: {
           Authorization: localStorage.token,
         },
@@ -190,7 +190,7 @@ function App() {
         mobileNumber: form.elements.mobileNumber.value,
         anotherMobileNumber: form.elements.anotherMobileNumber.value,
       }
-      await axios.post("https://api-driving-school.herokuapp.com/api/auth/signup", userBody)
+      await axios.post("http://localhost:3000/api/auth/signup", userBody)
       toast.success("please check your email to continue registration")
       
     } catch (error) {
@@ -207,7 +207,7 @@ function App() {
         email: form.elements.email.value,
         password: form.elements.password.value,
       }
-      const response = await axios.post("https://api-driving-school.herokuapp.com/api/auth/login", userBody)
+      const response = await axios.post("http://localhost:3000/api/auth/login", userBody)
       localStorage.token = response.data
       toast.success("login success")
       getProfile()
@@ -241,7 +241,7 @@ function App() {
         mobileNumber: form.elements.mobileNumber.value,
         anotherMobileNumber: form.elements.anotherMobileNumber.value,
       }
-      await axios.put("https://api-driving-school.herokuapp.com/api/auth/profile", profileBody, {
+      await axios.put("http://localhost:3000/api/auth/profile", profileBody, {
         headers: {
           Authorization: localStorage.token,
         },
@@ -292,7 +292,7 @@ function App() {
         curriculumVitae:documentUrl,
       }
       
-      await axios.put("https://api-driving-school.herokuapp.com/api/coaches/profile", profileBody, {
+      await axios.put("http://localhost:3000/api/coaches/profile", profileBody, {
         headers: {
           Authorization: localStorage.token,
         },
@@ -312,7 +312,7 @@ function App() {
       const appointmentBody = {
         name: form.elements.name.value,
       }
-      await axios.post(`https://api-driving-school.herokuapp.com/api/coaches/${coachId}/appointment`, appointmentBody, {
+      await axios.post(`http://localhost:3000/api/coaches/${coachId}/appointment`, appointmentBody, {
         headers: {
           Authorization: localStorage.token,
         },
@@ -332,7 +332,7 @@ function App() {
   //     const appointmentBody = {
   //       name: form.elements.name.value,
   //     }
-  //     await axios.put(`https://api-driving-school.herokuapp.com/api/coaches/${coachId}/appointment/${appointmentId}`, appointmentBody, {
+  //     await axios.put(`http://localhost:3000/api/coaches/${coachId}/appointment/${appointmentId}`, appointmentBody, {
   //       headers: {
   //         Authorization: localStorage.token,
   //       },
@@ -348,7 +348,7 @@ function App() {
 
   const deleteAppointment = async (coachId, appointmentId)=>{
     try{
-      await axios.delete(`https://api-driving-school.herokuapp.com/api/coaches/${coachId}/appointment/${appointmentId}`,{
+      await axios.delete(`http://localhost:3000/api/coaches/${coachId}/appointment/${appointmentId}`,{
         headers: {
           Authorization: localStorage.token,
         },
@@ -406,7 +406,7 @@ function App() {
         anotherMobileNumber: form.elements.anotherMobileNumber.value,
         curriculumVitae: documentUrl,
       }
-      await axios.post("https://api-driving-school.herokuapp.com/api/coaches/signup-coach", userBody)
+      await axios.post("http://localhost:3000/api/coaches/signup-coach", userBody)
       toast.success("please check your email to continue registration")
       
     } catch (error) {
@@ -422,7 +422,7 @@ function App() {
         email: form.elements.email.value,
         password: form.elements.password.value,
       }
-      const response = await axios.post("https://api-driving-school.herokuapp.com/api/coaches/login", userBody)
+      const response = await axios.post("http://localhost:3000/api/coaches/login", userBody)
       localStorage.token = response.data
       toast.success("login success")
       getProfile()
@@ -442,7 +442,7 @@ function App() {
         price:form.elements.price.value
       }
 
-      await axios.post(`https://api-driving-school.herokuapp.com/api/auth/users/${userId}/rating`, ratingBody, {
+      await axios.post(`http://localhost:3000/api/auth/users/${userId}/rating`, ratingBody, {
         headers: {
           Authorization: localStorage.token,
         },
@@ -463,7 +463,7 @@ function App() {
         numberOfHours:form.elements.numberOfHours.value,
         time:form.elements.time.value,
       }
-      await axios.post(`https://api-driving-school.herokuapp.com/api/auth/users/${userId}/message`, messageBody,{
+      await axios.post(`http://localhost:3000/api/auth/users/${userId}/message`, messageBody,{
         headers: {
           Authorization: localStorage.token,
         },
@@ -483,7 +483,7 @@ function App() {
   //     const messageBody = {
   //       time:form.elements.time.value,
   //     }
-  //     await axios.put(`https://api-driving-school.herokuapp.com/api/auth/users/${userId}/message/${messageId}`, messageBody,{
+  //     await axios.put(`http://localhost:3000/api/auth/users/${userId}/message/${messageId}`, messageBody,{
   //       headers: {
   //         Authorization: localStorage.token,
   //       },
@@ -499,7 +499,7 @@ function App() {
   const deleteMessage = async (userId, messageId) =>{
     try{
 
-      await axios.delete(`https://api-driving-school.herokuapp.com/api/auth/users/${userId}/message/${messageId}`,{
+      await axios.delete(`http://localhost:3000/api/auth/users/${userId}/message/${messageId}`,{
         headers: {
           Authorization: localStorage.token,
         },
@@ -521,7 +521,7 @@ function App() {
       const messageBody = {
         comment:form.elements.comment.value,
       }
-      await axios.post(`https://api-driving-school.herokuapp.com/api/auth/message/${messageId}/comments`, messageBody,{
+      await axios.post(`http://localhost:3000/api/auth/message/${messageId}/comments`, messageBody,{
         headers: {
           Authorization: localStorage.token,
         },
@@ -541,7 +541,7 @@ function App() {
       const messageBody = {
         comment:form.elements.comment.value,
       }
-      await axios.put(`https://api-driving-school.herokuapp.com/api/auth/message/${messageId}/comments/${commentId}`, messageBody,{
+      await axios.put(`http://localhost:3000/api/auth/message/${messageId}/comments/${commentId}`, messageBody,{
         headers: {
           Authorization: localStorage.token,
         },
@@ -557,7 +557,7 @@ function App() {
   const deleteComment = async ( messageId,commentId) =>{
     try{
 
-      await axios.delete(`https://api-driving-school.herokuapp.com/api/auth/message/${messageId}/comments/${commentId}`,{
+      await axios.delete(`http://localhost:3000/api/auth/message/${messageId}/comments/${commentId}`,{
         headers: {
           Authorization: localStorage.token,
         },
@@ -580,7 +580,7 @@ function App() {
       const userBody = {
         email: form.elements.email.value
       }
-      await axios.post("https://api-driving-school.herokuapp.com/api/auth/forgot-password",userBody)
+      await axios.post("http://localhost:3000/api/auth/forgot-password",userBody)
       toast.success("password resent link is sent, go check your email")
     }catch (error) {
       if (error.response) toast.error(error.response.data)
@@ -600,7 +600,7 @@ function App() {
         password
       }
 
-      await axios.post(`https://api-driving-school.herokuapp.com/api/auth/reset-password/${token}`, userBody)
+      await axios.post(`http://localhost:3000/api/auth/reset-password/${token}`, userBody)
       navigate("/login")
 
     }catch (error) {
@@ -618,7 +618,7 @@ function App() {
       const userBody = {
         email: form.elements.email.value
       }
-      await axios.post("https://api-driving-school.herokuapp.com/api/coaches/forgot-password",userBody)
+      await axios.post("http://localhost:3000/api/coaches/forgot-password",userBody)
       toast.success("password resent link is sent, go check your email")
     }catch (error) {
       if (error.response) toast.error(error.response.data)
@@ -638,7 +638,7 @@ function App() {
         password
       }
 
-      await axios.post(`https://api-driving-school.herokuapp.com/api/coaches/reset-password/${token}`, userBody)
+      await axios.post(`http://localhost:3000/api/coaches/reset-password/${token}`, userBody)
       navigate("/loginCoach")
 
     }catch (error) {

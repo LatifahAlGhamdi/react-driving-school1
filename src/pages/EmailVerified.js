@@ -9,7 +9,7 @@ function EmailVerified() {
     const navigate = useNavigate()
     const verifyEmailToken = async () =>{
         try{
-            await axios.get(`https://api-driving-school.herokuapp.com/api/auth/verify_email/${token}`)
+            await axios.get(`http://localhost:3000/api/auth/verify_email/${token}`)
             toast.success("email verified")
             navigate("/login")
         }catch{
