@@ -12,7 +12,7 @@ function RatingsCoach() {
     const getRatings = async ()=>{
       try{
   
-        const response = await axios.get("http://localhost:3000/api/coaches/profile/ratings",{
+        const response = await axios.get("https://api-driving-school.herokuapp.com/api/coaches/profile/ratings",{
           headers: {
             Authorization: localStorage.token,
           },

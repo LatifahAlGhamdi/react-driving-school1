@@ -13,7 +13,7 @@ function Messages() {
   const getMessages = async ()=>{
     try{
 
-      const response = await axios.get("http://localhost:3000/api/auth/profile/user/messages",{
+      const response = await axios.get("https://api-driving-school.herokuapp.com/api/auth/profile/user/messages",{
         headers: {
           Authorization: localStorage.token,
         },
