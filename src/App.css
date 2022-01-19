@@ -302,7 +302,7 @@ ul li:hover {
    
 }
 
-/* @media (min-width:300px)and(max-width:812px){
+@media (min-width:300px)and(max-width:812px){
 ul li{
     height: 30px;
     line-height: 30px;
@@ -311,6 +311,6 @@ ul li{
     font-size: 10px;
 }
 .nav-l{
-    left: 150px;
+    left: 140px;
 }
-} */
+}
