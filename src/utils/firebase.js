@@ -1,6 +1,6 @@
 import firebase from "firebase"
 const firebaseConfig = {
-  apiKey: "AIzaSyDsrJFh7TH2-ytOScHuzG1IfoNzHRXfiU0",
+  apiKey: process.env.REACT_APP_FIREBASE_KEY,
   authDomain: "drivingschool-4b5a6.firebaseapp.com",
   projectId: "drivingschool-4b5a6",
   storageBucket: "drivingschool-4b5a6.appspot.com",

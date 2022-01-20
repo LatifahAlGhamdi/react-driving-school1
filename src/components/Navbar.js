@@ -18,11 +18,11 @@ function Navbar() {
   return (
     <nav className="navbar">
       <ul className="main">
-      
+          <div className="nav-l">
               <Link to="/" style={{textDecoration:"none", color:"white"}}>
                 <li> <RiHome8Line style={{fontSize:"20px"}}/>  Home</li>
               </Link>
-              <div className="nav-l">
+              
               <Link to="/trafficInformation" style={{textDecoration:"none", color:"white"}}>
                 <li> <RiTrafficLightFill style={{fontSize:"20px"}}/>  Traffic instructions</li>
               </Link>

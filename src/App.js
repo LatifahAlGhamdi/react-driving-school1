@@ -640,7 +640,7 @@ function App() {
 
       await axios.post(`https://api-driving-school.herokuapp.com/api/coaches/reset-password/${token}`, userBody)
       navigate("/loginCoach")
-
+     
     }catch (error) {
       if (error.response) toast.error(error.response.data)
       else console.log(error)

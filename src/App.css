@@ -53,7 +53,7 @@ ul li:hover {
     flex-direction: row;
     position: absolute;
     top: 8px;
-    left: 215px;
+    left: 30px;
 }
 .nav-r {
     display: flex;
@@ -254,8 +254,6 @@ ul li:hover {
     padding-bottom:auto;
     position: relative;
     z-index: -1;
-    
-   
 }
 .home .content{
     position: absolute;
@@ -266,7 +264,7 @@ ul li:hover {
 }
 .information{
     margin-top: 70px;
-    width: 700px;
+    max-width: 700px;
     line-height: 40px;
 }
 .traffic-instructions{
@@ -302,15 +300,59 @@ ul li:hover {
    
 }
 
-@media (min-width:300px)and(max-width:812px){
+@media(max-width:600px){
+.main {
+    margin-left: 2px;
+}
 ul li{
-    height: 30px;
-    line-height: 30px;
-    margin-right: 10px;
+    height: 50px;
+    line-height: 0.9px;
+    margin-right: 0px;
     width: 70px;
     font-size: 10px;
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 20px;
 }
 .nav-l{
-    left: 140px;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 8px;
+    left: 2px;
+    width: 100px;
 }
+
+.nav-r {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 8px;
+    right: 2px;
+}
+.home .content{
+    position: absolute;
+    left: 80px;
+    top: 60px;
+    color: white;
+    
+}
+.home h2{
+    font-size: 20px;
+}
+
+.home{
+    background-image: linear-gradient(rgba(0,0,0,0.72)  ,rgba(0,0,0,0.72) ), url("https://img.freepik.com/free-photo/close-up-man-driving-car_23-2147961519.jpg?size=626&ext=jpg");
+    background-repeat: no-repeat;
+    /* position: absolute; */
+    background-size: 500px 1000px;
+    /* height: 900px; */
+    /* width: 100%; */
+    object-fit: cover;
+    padding-bottom:auto;
+    position: relative;
+    z-index: -1;
+}
+
+
 }
